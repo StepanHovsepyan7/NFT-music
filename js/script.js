@@ -17,25 +17,30 @@ fabarsA.addEventListener('click',() =>{
     if(blackBackGround.classList.contains('blackBackGround')){
         blackBackGround.classList.add('blackBackGroundBlock');
         mobileParent.style.display = 'block';
+        document.body.classList.add('no-scroll'); 
     }
 })
 
 blackBackGround.addEventListener('click', () => {
     blackBackGround.classList.remove('blackBackGroundBlock');
     mobileParent.style.display = 'none';
+    document.body.classList.remove('no-scroll'); 
 });
 
 menulink2.forEach((e)=>{
     e.addEventListener('click', () => {
         blackBackGround.classList.remove('blackBackGroundBlock');
-        mobileParent.style.display = 'none';
+        mobileParent.style.display = 'none'; 
+        document.body.classList.remove('no-scroll'); 
     })
 })
 
 closeNav.addEventListener('click',()=>{
     blackBackGround.classList.remove('blackBackGroundBlock');
     mobileParent.style.display = 'none';
+    document.body.classList.remove('no-scroll'); 
 })
+
 
 
 // mobile Navigation Javascript End
