@@ -10,8 +10,8 @@ body.no-scroll {
   overflow: hidden;
 }
 
-html{
-  scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth !important;
 }
 .blackBackGround {
   z-index: 999;
@@ -513,6 +513,20 @@ header {
     transform: translate(0%);
   }
 }
+
+@keyframes menuClose {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(100%);
+  }
+}
+
+.mobileParent.hide {
+  animation: menuClose 0.5s forwards;
+}
+
 .mobilelogo {
   border-bottom: 1px solid white;
   display: flex;
@@ -604,7 +618,6 @@ header {
   color: #ffffff;
   display: flex;
   justify-content: space-between;
-
 }
 .footer__container h3 {
   font-weight: 400;
@@ -644,6 +657,6 @@ header {
 .something3 {
   margin-left: 42px;
 }
-.copyright-info  p {
-  margin-top:15px;
+.copyright-info p {
+  margin-top: 15px;
 }
